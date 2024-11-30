@@ -1,0 +1,383 @@
+/*Name: Max Schwickert*/
+/*Date: Nov 30th 2024*/
+/*MEID: MAX2155621*/
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Typography and Links */
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #2563eb;
+    text-shadow: 0 0 10px rgba(37, 99, 235, 0.2);
+}
+
+p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #4b5563;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #007BFF;
+}
+
+/* Layout Components */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    background-color: #fff;
+    /* Add space for footer */
+    margin: auto auto 60px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: relative;
+    text-align: center;
+    z-index: 3;
+    width: 100%;
+}
+footer > p {
+    color: white;
+    font-size: 12px;
+}
+
+/* Navigation Styles */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    font-size: 1rem;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #007BFF;
+    color: #007BFF;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Social Media Links */
+.social-media {
+    margin-top: 1rem;
+}
+
+.social-media a {
+    margin: 0 0.5rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #007BFF;
+}
+
+/* Button Styles */
+button, .cta-button {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    background: #2563eb;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.required {
+    color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    display: none;
+}
+
+/* Portfolio and Project Styles */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.project-card h3 {
+    margin: 0.5rem 0;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card .skills {
+    font-size: 0.8rem;
+    color: #555;
+}
+
+/* Canvas and Content Overlay */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Certifications Styles */
+.certifications-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.certification-card {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.certification-card img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.certification-card h3 {
+    margin: 0.5rem 0;
+}
+
+.certification-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Resume Styles */
+.resume-item {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+}
+
+.resume-item h2 {
+    cursor: pointer;
+    position: relative;
+    padding-right: 1rem;
+}
+
+.resume-item h2::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    transition: transform 0.3s ease;
+}
+
+.resume-item h2.active::after {
+    transform: rotate(45deg);
+}
+
+.resume-item .content {
+    display: none;
+    margin-top: 0.5rem;
+}
+
+.resume-item .content ul {
+    list-style: disc inside;
+}
+
+.resume-item .content.show {
+    display: block;
+}
+
+.feature-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+.feature-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+.feature-links a {
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.source-link {
+    background-color: #333;
+    color: white;
+}
+.try-link {
+    background-color: #2563eb;
+    color: white;
+}
+.feature-details {
+    margin: 10px 0;
+    color: #666;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        transition: left 0.3s ease;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .nav-links.show {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}

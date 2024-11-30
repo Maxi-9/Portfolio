@@ -1,0 +1,62 @@
+<!--Name: Max Schwickert-->
+<!--Date: Nov 30th 2024-->
+<!--MEID: MAX2155621-->
+<!-- projects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max's GitHub Portfolio - Projects</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <nav>
+        <div class="logo">Max's Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html" class="active">Portfolio</a></li>
+            <li><a href="js.html">Made By Me</a></li>
+            <li><a href="cert.html">Certifications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="resume.html">Resume</a></li>
+        </ul>
+        <div class="menu-toggle">☰</div>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<main>
+    <section class="portfolio-section">
+        <h1>My Projects</h1>
+        <div class="filters">
+            <label for="filter">Filter by Skill:</label>
+            <select id="filter">
+                <option value="all">All</option>
+                <option value="Python">Python</option>
+                <option value="Swift">Swift</option>
+                <option value="Html">Web</option>
+            </select>
+        </div>
+        <div id="projects-container" class="projects-container">
+            <!-- Projects will be dynamically added here -->
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="social-media">
+        <a href="https://github.com/Maxi-9" target="_blank">GitHub</a>
+        <a href="www.linkedin.com/in/max-schwickert-04114833b" target="_blank">LinkedIn</a>
+        <!--        <a href="https://twitter.com/" target="_blank">Twitter</a> I'll set one up later-->
+    </div>
+    <p>&copy; 2024 Max. All rights reserved.</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/gitFetch.js"></script>
+</body>
+</html>

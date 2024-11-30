@@ -1,0 +1,107 @@
+<!--Name: Max Schwickert-->
+<!--Date: Nov 30th 2024-->
+<!--MEID: MAX2155621-->
+<!-- resume.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max's GitHub Portfolio - Resume</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">Max's Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Portfolio</a></li>
+            <li><a href="js.html">Made By Me</a></li>
+            <li><a href="cert.html">Certifications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="resume.html" class="active">Resume</a></li>
+        </ul>
+        <div class="menu-toggle">☰</div>
+    </nav>
+</header>
+
+<main>
+    <section class="resume-section">
+        <h1>My Resume</h1>
+        <p>View my full and up-to-date resume at <a href="https://www.linkedin.com/in/max-schwickert-04114833b" target="_blank">LinkedIn</a></p>
+        <div class="resume-item">
+            <h2 onclick="toggleSection('education')">Education</h2>
+            <div id="education" class="content">
+                <p><strong>Arizona Virtual Academy</strong></p>
+                <p>2014 - 2024 | GPA: 4.0</p>
+                <p>Capstone Project: Trend Prediction Framework</p>
+
+                <p><strong>Rio Salado Community College</strong></p>
+                <p>2020 - 2024 | GPA: 3.946</p>
+                <p>Programming Certificate</p>
+            </div>
+        </div>
+
+        <div class="resume-item">
+            <h2 onclick="toggleSection('certifications')">Certifications</h2>
+            <div id="certifications" class="content">
+                <p><strong>AWS Cloud Solutions Architect</strong> - Coursera, 2023</p>
+                <p><strong>Programming Certificate</strong> - Rio Salado Community College, 2023</p>
+            </div>
+        </div>
+
+        <div class="resume-item">
+            <h2 onclick="toggleSection('achievements')">Academic Achievements</h2>
+            <div id="achievements" class="content">
+                <ul>
+                    <li>Phi Theta Kappa member (2023-2024)</li>
+                    <li>Top percentile in MathCon Nationals, Chicago (2022)</li>
+                    <li>Multiple Science Fair achievements including research in:
+                        <ul>
+                            <li>Magnetic Field Detection Systems</li>
+                            <li>Algorithm Development</li>
+                            <li>Environmental Solutions</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="resume-item">
+            <h2 onclick="toggleSection('skills')">Technical Skills</h2>
+            <div id="skills" class="content">
+                <ul>
+                    <li>Cloud Architecture (AWS)</li>
+                    <li>Programming & Algorithm Development</li>
+                    <li>Data Analysis</li>
+                    <li>Project Management</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="resume-item">
+            <h2 onclick="toggleSection('leadership')">Leadership & Service</h2>
+            <div id="leadership" class="content">
+                <ul>
+                    <li>Created data processing software for local organization</li>
+                    <li>Technical volunteer for athletic competitions</li>
+                    <li>Instructor mentor for martial arts training</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="social-media">
+        <a href="https://github.com/Maxi-9" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/max-schwickert-04114833b" target="_blank">LinkedIn</a>
+    </div>
+    <p>&copy; 2024 Max. All rights reserved.</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/spoiler.js"></script>
+</body>
+</html>
